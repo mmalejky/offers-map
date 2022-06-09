@@ -1,0 +1,167 @@
+@import '~/assets/fontawesome/css/all.min.css';
+@import '~/assets/leaflet/leaflet.css';
+@import '~/assets/leaflet-draw/leaflet.draw.css';
+@import '~/assets/leaflet-easy-button/easy-button.css';
+@import '~/assets/leaflet-marker-cluster/MarkerCluster.css';
+
+body {
+    background: #F2F4F5;
+}
+
+body.dark {
+    background: #222;
+}
+
+:focus-visible {
+    outline: 0;
+}
+
+#page {
+    height: 100vh;
+    display: flex;
+}
+
+#loader {
+    position: absolute;
+    visibility: visible;
+    border: 12px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 12px solid #444444;
+    width: 70px;
+    height: 70px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.center-icon {
+    margin-top: 8px;
+}
+
+.center {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#searchbar {
+    width: 20vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+}
+
+#list.dark > * > .offer-div {
+    background: rgb(53, 53, 53);
+    color: white;
+}
+
+.map-tiles.dark {
+   filter: brightness(0.6) invert(1) contrast(3) hue-rotate(200deg) saturate(0.3) brightness(0.7); 
+}
+
+#searchbox {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#map {
+    height: 100vh;
+    flex-grow: 1;
+    right: 0;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.mybtn {
+    width: 50px;
+    padding: 0;
+}
+
+.offer-div {
+    margin: 7px;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.offer-img {
+    width:      100%;
+    height:     100%;
+    object-fit: cover;
+}
+
+.offer-img-div {
+    margin: auto;
+    height: 200px;
+    margin-bottom: 6px;
+}
+
+.offer-price {
+    text-align: right;
+}
+
+.offer-highlight {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+    transition: all 200ms ease-out;
+}
+
+.icon-img {
+    position: relative;
+    top:      -2px;
+    width:    1em;
+    height:   1em;
+}
+
+.search-button {
+    background: red;
+}
+
+.my-div-icon {
+    background: #fff;
+    border: 1px solid #666 !important;
+    border-radius: 5px !important;
+    width: auto !important;
+    height: auto !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    font-size: 13px !important;
+    font-weight: bold !important;
+    white-space: nowrap !important;
+    line-height: 1.2;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+}
+
+.scrollbar {
+  margin-left: 3px;
+  margin-right: 3px;
+  margin-bottom: 24px;
+  float: left;
+  overflow-y: scroll;
+}
+
+.scrollbar-primary::-webkit-scrollbar {
+  width: 8px;
+  background-color: transparent;
+}
+
+.scrollbar-primary::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: #4285F4;
+}
+
+.scrollbar-primary {
+  scrollbar-color: #4285F4;
+}
